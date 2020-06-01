@@ -114,3 +114,10 @@ function localDescCreated(desc) {
     onError
   );
 }
+<video id=”localvid” autoplay </video>
+<button type = “button” onclick=”startvideo ( );” >start video </button>
+<button type = “button” onclick=”stoptvideo ( );” >stop video </button>
+
+<video id = “remotevid” autoplay </video>
+<button type = “button” onclick=”connect ( );” >connect </button>
+<button type = “button” onclick=”hangUp ( );” > hangUp </button>
