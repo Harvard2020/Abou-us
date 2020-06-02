@@ -35,8 +35,13 @@
 </head>
 <body>
   <div class="copy">Send your URL to a friend to start a video call</div>
-  <video id="localVideo" autoplay muted></video>
-  <video id="remoteVideo" autoplay></video>
+  <video id=”localvid” autoplay </video>
+<button type = “button” onclick=”startvideo ( );” >start video </button>
+<button type = “button” onclick=”stoptvideo ( );” >stop video </button>
+
+<video id = “remotevid” autoplay </video>
+<button type = “button” onclick=”connect ( );” >connect </button>
+<button type = “button” onclick=”hangUp ( );” > hangUp </button>
   <script src="script.js"></script>
 </body>
 </html>
