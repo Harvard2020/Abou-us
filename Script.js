@@ -1,10 +1,8 @@
-// Generate random room name if needed 
 if (!location.hash) {
   location.hash = Math.floor(Math.random() * 0xFFFFFF).toString(16);
 }
 const roomHash = location.hash.substring(1);
   
-// TODO: Replace with your own channel ID
 const drone = new ScaleDrone('2xmbUiTsqTzukyf7');
 // Room name needs to be prefixed with 'observable-'
 const roomName = 'observable-' + roomHash;
@@ -15,8 +13,7 @@ const configuration = {
 };
 let room;
 let pc;
-  
-  
+   
 function onSuccess() {};
 function onError(error) {
   console.error(error);
@@ -42,7 +39,6 @@ drone.on('open', error => {
   });
 });
   
-// Send signaling data via Scaledrone
 function sendMessage(message) {
   drone.publish({
     room: roomName,
@@ -53,22 +49,18 @@ function sendMessage(message) {
 function startWebRTC(isOfferer) {
   pc = new RTCPeerConnection(configuration);
   
-  // 'onicecandidate' notifies us whenever an ICE agent needs to deliver a
-  // message to the other peer through the signaling server
   pc.onicecandidate = event => {
     if (event.candidate) {
       sendMessage({'candidate': event.candidate});
     }
   };
   
-  // If user is offerer let the 'negotiationneeded' event create the offer
   if (isOfferer) {
     pc.onnegotiationneeded = () => {
       pc.createOffer().then(localDescCreated).catch(onError);
     }
   }
   
-  // When a remote stream arrives display it in the #remoteVideo element
   pc.onaddstream = event => {
     remoteVideo.srcObject = event.stream;
   };
