@@ -35,13 +35,14 @@
 </head>
 <body>
   <div class="copy">Send your URL to a friend to start a video call</div>
-  <video id=”localvid” autoplay </video>
+  <video id=”localvid” autoplay 
 <button type = “button” onclick=”startvideo ();”>start video</button>
 <button type = “button” onclick=”stoptvideo ();”>stop video</button>
-
+    </video>
 <video id = “remotevid” autoplay </video>
 <button type = “button” onclick=”connect ();”>connect</button> 
 <button type = “button” onclick=”hangUp ();”>hangUp</button>
+</body>
   
   // Generate random room name if needed 
 if (!location.hash) {
