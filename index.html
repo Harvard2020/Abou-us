@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="webrtc.js"></script>
+   
     <title>WebRTC Simple Video-Chat</title>
     <style>
 		* {
@@ -81,17 +81,7 @@
 			border-radius: 4px;
 			cursor: pointer;
 			transform: translate(-50%, -50%);
-		}
-		.logger {
-			width: 40%;
-			padding: 14px;
-			line-height: 1.5;
-			color: #4fbf40;
-			border-radius: 6px;
-			background-color: #272727;
-		}
-		.logger .error {
-			color: #DD4A68;
+		}	
 		
 	</style>
   </head>
@@ -103,6 +93,7 @@
     <input id="videoCallButton" type="button" disabled value="Start"/>
     <input id="endCallButton" type="button" disabled value="End"/>
     <script type="text/javascript"></script>
+    <script src="webrtc.js"></script>
     <script>window.addEventListener("load", pageReady);</script>
   </body>
 </html>
