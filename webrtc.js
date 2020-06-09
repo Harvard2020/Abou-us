@@ -84,24 +84,43 @@ function pageReady() {
   }
 };
 wsc.onmessage = function (evt) {
-  var signal = JSON.parse( evt.data);
+  var signal = null;
   if (!peerConn) answerCall();
+  signal = JSON.parse(evt.data);
   if (signal.sdp) {
-    peerConn.setRemoteDescription( new RTCSessionDescription( signal.sdp));
-  } else if (signal.candidate) {
-    peerConn.addIceCandidate( new RTCIceCandidate( signal.candidate));
-  } else if (signal.closeConnection){
+    console.log("Received SDP from remote peer.");
+    peerConn.setRemoteDescription(new RTCSessionDescription(signal.sdp));
+  }
+  else if (signal.candidate) {
+    console.log("Received ICECandidate from remote peer.");
+    peerConn.addIceCandidate(new RTCIceCandidate(signal.candidate));
+  } else if ( signal.closeConnection){
+    console.log("Received 'close call' signal from remote peer.");
     endCall();
   }
 };
-function initiateCall() {
-  prepareCall();
-  navigator.getUserMedia({"audio": true, "video": true }, function (stream) {
-    localVideo.src = URL.createObjectURL( stream);
-    peerConn.addStream( stream);
-    createAndSendOffer();
-  }, function (error) { console.log( error);});
+
 };
+function prepareCall() {
+  peerConn = new RTCPeerConnection(peerConnCfg);
+  // send any ice candidates to the other peer
+  peerConn.onicecandidate = onIceCandidateHandler;
+  // once remote stream arrives, show it in the remote video element
+  peerConn.onaddstream = onAddStreamHandler;
+};
+
+// run start(true) to initiate a call
+function initiateCall() {
+  prepareCall ();
+  // get the local stream, show it in the local video element and send it
+  navigator.getUserMedia({ "audio": true, "video": true }, function (stream) {
+    localVideoStream = stream;
+    localVideo.src = URL.createObjectURL(localVideoStream);
+    peerConn.addStream(localVideoStream);
+    createAndSendOffer();
+  }, function(error) { console.log(error);});
+};
+
 function prepareCall() {
   peerConn = new RTCPeerConnection( peerConnCfg);
   peerConn.onicecandidate = onIceCandidateHandler;
@@ -140,11 +159,13 @@ function answerCall() {
   prepareCall();
   // get the local stream, show it in the local video element and send it
   navigator.getUserMedia({ "audio": true, "video": true }, function (stream) {
-    localVideo.src = URL.createObjectURL( stream);
-    peerConn.addStream(stream);
+     localVideoStream = stream;
+    localVideo.src = URL.createObjectURL(localVideoStream);
+    peerConn.addStream(localVideoStream);
     createAndSendAnswer();
   }, function(error) { console.log(error);});
 };
+
 function createAndSendAnswer() {
   peerConn.createAnswer(
     function (answer) {
