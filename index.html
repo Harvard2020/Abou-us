@@ -1,6 +1,6 @@
 
 
-<!DOCTYPE html>
+
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,8 +50,22 @@
 			display: none;
 			line-height: 40px;
 			outline: none;
-			color: #fff;
-			background-color: #409eff;
+			color: green;
+			background-color: red;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			transform: translate(-50%, -50%);
+		.End-button {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 100px;
+			display: none;
+			line-height: 40px;
+			outline: none;
+			color: red;
+			background-color: red;
 			border: none;
 			border-radius: 4px;
 			cursor: pointer;
@@ -74,8 +88,8 @@
   <body>
     <video id="remoteVideo" autoplay></video>
     <video id="localVideo" autoplay muted></video>
-    <input id="videoCallButton" type="button" disabled value="Start"/>
-    <input id="endCallButton" type="button" disabled value="End"/>
+    <input id="Start-Button" type="button" disabled value="Start"/>
+    <input id="end-Button" type="button" disabled value="End"/>
     <script>window.addEventListener("load", pageReady);</script>
   </body>
 </html>
