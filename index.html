@@ -34,9 +34,17 @@
   </style>
 </head>
 <body>
+  <div>
   <div class="copy">Send URL</div>
   <video id=”localvid” autoplay </video>
+      <button type = “button” onclick=”startvideo ( );” >start video </button>
+      <button type = “button” onclick=”stoptvideo ( );” >stop video </button>
+ </div>
+ <div>
   <video id = “remotevid” autoplay </video>
+      <button type = “button” onclick=”connect ( );” >connect </button>
+      <button type = “button” onclick=”hangUp ( );” > hangUp </button>
+  </div>
  <script src="script.js"></script>
 </body>
 </html>
