@@ -68,7 +68,7 @@ function pageReady() {
   endCallButton = document.getElementById("endCallButton");
   localVideo = document.getElementById('localVideo');
   remoteVideo = document.getElementById('remoteVideo');
-  // check browser WebRTC availability 
+  // check browser webrtc availability 
   if (navigator.getUserMedia) {
     videoCallButton = document.getElementById("videoCallButton");
     endCallButton = document.getElementById("endCallButton");
