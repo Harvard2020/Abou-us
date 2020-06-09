@@ -59,7 +59,7 @@ ProxyPassReverse /websocket/ ws://localhost:3434/
 
 var localVideoElem = null, remoteVideoElem = null, localVideoStream = null,
     videoCallButton = null, endCallButton = null,
-    peerConn = null, wsc = new WebSocket('ws://my-web-domain.de/websocket/'),
+    peerConn = null, wsc = new WebSocket('ws://example.com/chat'),
     peerConnCfg = {'iceServers': 
       [{'url':'stun:stun.services.mozilla.com'}, {'url':'stun:stun.l.google.com:19302'}]
     };
