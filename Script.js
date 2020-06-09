@@ -6,22 +6,8 @@ window.RTCSessionDescription = window.RTCSessionDescription || window.mozRTCSess
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition 
   || window.msSpeechRecognition || window.oSpeechRecognition;
 
-var config = {
-  wssHost: 'wss://wotpal.club'
-  // wssHost: 'wss://example.com/myWebSocket'
-};
-var localVideoElem = null, 
-  remoteVideoElem = null, 
-  localVideoStream = null,
-  videoCallButton = null, 
-  endCallButton = null;
-var peerConn = null,
-  wsc = new WebSocket(config.wssHost),
-  peerConnCfg = {'iceServers': 
-    [{'url': 'stun:stun.services.mozilla.com'}, 
-     {'url': 'stun:stun.l.google.com:19302'}]
-  };
-    
+    };
+
 function pageReady() {
   // check browser WebRTC availability 
   if(navigator.getUserMedia) {
