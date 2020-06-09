@@ -1,28 +1,18 @@
 
 
+<!DOCTYPE html>
 <html>
   <head>
     <script src="webrtc.js"></script>
-    <title>WebRTC Test</title>
+    <title>WebRTC Simple Video-Chat</title>
   </head>
   
   <body>
-    <video id="localVideo" autoplay</video>
-    <video id="RemoteVideo" autoplay</video>
-    <script>
-      window.addEventListener("load", function (evt) {
-        navigator.getUserMedia({ audio: true, video: true},
-          function(stream) {
-            var video = document.getElementById('localVideo');
-            video.src = window.URL.createObjectURL(stream);
-          },
-          function(err) {
-            console.log("The following error occurred: " + err.name);
-          }
-        );
-      });
-
-    </script>
+    <video id="remoteVideo" autoplay></video>
+    <video id="localVideo" autoplay muted></video>
+    <input id="videoCallButton" type="button" disabled value="Video Call"/>
+    <input id="endCallButton" type="button" disabled value="End Call"/>
+    <script>window.addEventListener("load", pageReady);</script>
   </body>
 </html>
  
