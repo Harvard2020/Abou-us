@@ -2,16 +2,27 @@
 
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="webrtc.js"></script>
     <title>WebRTC Simple Video-Chat</title>
+    <style>
+      	    	 h1, h3 {
+        		color: Green;
+        		font-weight: blod;
+        		text-align: center;
+        		font-family: arial, sans-sherif;
+        		font-size: 24px;
+			Padding-top: 10px;
+        	}
+    </style>
   </head>
   
   <body>
     <video id="remoteVideo" autoplay></video>
     <video id="localVideo" autoplay muted></video>
-    <input id="videoCallButton" type="button" disabled value="Video Call"/>
-    <input id="endCallButton" type="button" disabled value="End Call"/>
+    <input id="videoCallButton" type="button" disabled value="Start"/>
+    <input id="endCallButton" type="button" disabled value="End"/>
     <script>window.addEventListener("load", pageReady);</script>
   </body>
 </html>
-© 2020 GitHub, Inc.
+
