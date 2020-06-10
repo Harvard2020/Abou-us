@@ -1,61 +1,11 @@
-
 <html>
+
   <head>
     <title>Video Chat</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="Video Chat.">
-    <meta name="author" content="Brian Mau">
     <link href="/css/main.css" rel="stylesheet">
-	  
-<style>
-html {
-	overflow: hidden;
-	height: 100%;
-}
-.one video {
-	object-fit: cover;
-}
-.localVideo {
-	width: 20%;
-	position: absolute;
-	z-index: 2;
-	bottom: 10px;
-	left: 10px;
-	display: block;
-}
-.remoteVideos {
-	width: 50%;
-	height: 50%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: stretch;
-}
-.remoteVideos video {
-	flex-grow: 1;
-	flex-shrink: 1;
-	min-width: 0px;
-	min-height: 0px;
-}
-body {
-  background-color: black;
-  margin: 0;
-	height: 75%;
-	width: 75%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-}
-
-</style>
   </head>
   <body>
     <video class="localVideo" playsinline autoplay muted></video>
