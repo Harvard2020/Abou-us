@@ -15,12 +15,12 @@
 			Padding-top: 10px;
         	}
 	    
-			.end {
+		.endCallButton {
 			color: Black;
 			background-color: red;
 	    }
 			
-		.start {
+		.videoCallButton {
 			
 			color: Black;
 			background-color: light green;
@@ -35,6 +35,14 @@
     <video id="localVideo" autoplay muted></video>
     <input id="videoCallButton" type="button" disabled value="Start"/>
     <input id="endCallButton" type="button" disabled value="End"/>
+    <div class="videoCallButton">
+    <div class="Start">
+    <a href="#" class="start">Home</a></div>
+    </div>
+    <div class="EndCallButton">
+    <div class="End">
+    <a href="#" class="start">Home</a></div>
+    </div>
     <script>window.addEventListener("load", pageReady);</script>
   </body>
 </html>
