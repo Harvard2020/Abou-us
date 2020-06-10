@@ -2,25 +2,16 @@
 
 <html>
   <head>
-    <meta chatset='utf-8'>
-    <title>WebRTC Video Chat</title>
+    <script src="webrtc.js"></script>
+    <title>WebRTC Simple Video-Chat</title>
   </head>
+  
   <body>
-    <div>
-      <input type='text' id='js-myself-id' placeholder='Input your ID'>
-      <span id='js-peer-id'></span>
-      <button id='js-open'>Open</button>
-      <input disabled type='text' id='js-partner-id' placeholder='Input partner ID'>
-      <button disabled id='js-connect'>Connect</button>
-    </div>
-    <div>
-      <video id='js-video-myself'></video>
-    </div>
-    <div>
-      <video id='js-video-partner'></video>
-    </div>
-    <script src='lib/jquery.min.js'></script>
-    <script src='lib/peer.js'></script>
-    <script src='app.js'></script>
+    <video id="remoteVideo" autoplay></video>
+    <video id="localVideo" autoplay muted></video>
+    <input id="videoCallButton" type="button" disabled value="Video Call"/>
+    <input id="endCallButton" type="button" disabled value="End Call"/>
+    <script>window.addEventListener("load", pageReady);</script>
   </body>
 </html>
+© 2020 GitHub, Inc.
