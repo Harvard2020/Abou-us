@@ -22,30 +22,7 @@
                 }
           }
 	
-		.grid {
-            background-color:green;
-            disply: grid;
-            padding: 20px;
-            grid-column-gap: 20px;
-            grid-raw-gap: 10px;
-            grid-template-columns: 200px, auto, auto;
-           
-            }
-		.grid-item {
-            background-color:black;
-            disply: grid;
-            padding: 20px;
-            grid-column-gap: 20px;
-            grid-raw-gap: 10px;
-            grid-template-columns: 200px, auto, auto;
-           
-            }
-            
-            .table {
-            border: 2px solid black;
-            border-collapse: collapse;
-            width: 50%;
-               }
+		
 	.row > div {
             border: 2px solid black;
             background-color:light blue;
@@ -136,40 +113,7 @@
 	.banner:hover {
     background: blue;
 	)
-	$color:blue;
-		ul {
-		font-size: 14px;
-		color: $color;
-		}
-		
-		ol {
-		font-size: 18px;
-		color: $color;
-		}
-		
-	%message {
-	color: white;
-        font-weight: blod;
-        text-align: center;
-        color: white;
-        font-family: arial, sans-sherif;
-        font-size: 18px;
-	border: 1px solid black;
-	padding: 20px;
-	margin:20 px;
-		}
-	.success {
-	@extend %message;
-	backgroud-colore: green;
-		}
-	.warning {
-	@extend %message;
-	backgroud-colore: orange;
-		}
-	.error {
-	@extend %message;
-	backgroud-colore: red;
-		}
+	
 	.success,.warning, .error {
 	color: white;
         font-weight: blod;
