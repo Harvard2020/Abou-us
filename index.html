@@ -147,7 +147,51 @@
 		color: $color;
 		}
 		
-	%message{
+	%message {
+	color: white;
+        font-weight: blod;
+        text-align: center;
+        color: white;
+        font-family: arial, sans-sherif;
+        font-size: 18px;
+	border: 1px solid black;
+	padding: 20px;
+	margin:20 px;
+		}
+	.success {
+	@extend %message;
+	backgroud-colore: green;
+		}
+	.warning {
+	@extend %message;
+	backgroud-colore: orange;
+		}
+	.error {
+	@extend %message;
+	backgroud-colore: red;
+		}
+	.success,.warning, .error {
+	color: white;
+        font-weight: blod;
+        text-align: center;
+        color: white;
+        font-family: arial, sans-sherif;
+        font-size: 18px;
+	border: 1px solid black;
+	padding: 20px;
+	margin:20 px;
+		}
+	.success {
+	backgroud-colore: green;
+		}
+	.warning {
+	backgroud-colore: orange;
+		}
+	.error {
+	backgroud-colore: red;
+		}
+		
+		
 		
         </style>
 	  
