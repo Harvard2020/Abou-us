@@ -81,7 +81,7 @@
     text-decoration: none;
     text-align: center;
 }
-            h2 {
+            h1 {
         color: white;
         font-weight: blod;
         text-align: center;
@@ -163,14 +163,26 @@
 		@extend .message;
 		background-color: red; }
 		
+		@media (min-width: 500px) {
+              h1::before {
+                 content: "Your local and global COVID-19 update";
+                }
+          }
+           @media (max-width: 499px) {
+              h1::before {
+                 content: "COVID-19 Update";
+                }
+          }
+		
         </style>
+	  
 	  
   </head>
   <body>
 	   
 	  
 	  <div class="banner">
-         	<h2> COVID-19 information update</h2>	
+         	<h1> </h1>	
 	</div>
 
     		<div class="round-button">
