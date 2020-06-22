@@ -5,9 +5,171 @@
   <head>
     <title>About us</title>
      <meta name="vewport" content="width=device-width, initial scale 1.0">
-	  
-	   
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	    
         <style>
+		
+		.error {
+  			border: 1px #f00;
+  			background-color: #fdd;
+
+ 			 &--serious {
+    			@extend .error;
+    			border-width: 3px;
+  			}
+		}
+		
+		.error:hover {
+  			background-color: #fee;
+			}
+
+			.error--serious {
+  			@extend .error;
+  			border-width: 3px;
+			}
+		.alert:hover, %strong-alert {
+  font-weight: bold;
+}
+
+%strong-alert:hover {
+  color: red;
+}
+           
+              @media (min-width: 500px) {
+              		p::before {
+                 	content: "Local and global COVID-19 update";
+                		}
+          		}
+           	@media (max-width: 499px) {
+              		p::before {
+                 	content: "COVID-19 Update";
+                		}
+         		}
+		.container {
+		position: fixed;
+		height: auto;
+		display: inline-table;
+		width: 100%;
+		margin-top: 20px;
+		Margin-left: 0px;
+		}
+		.btn {
+		display: inline-table;
+		text-align: center;
+		font-weight: bold;
+		grid-raw-gap: 10px;
+		background-color: #448CDD;
+  		color: white;
+  		font-size: 25px;
+  		padding: 5px;
+  		cursor: pointer;
+		Margin-left: 10px;
+		margin-right: 10px 
+  		border-radius: 5px;
+		Margin-top: 20px;
+		}
+		.container .btn {
+		display: inline-table;
+		text-align: center;
+		font-weight: bold;
+		grid-raw-gap: 10px;
+		background-color: #448CDD;
+  		color: blue;
+  		font-size: 20px;
+  		padding: 10px;
+  		cursor: pointer;
+		Margin-left: 10px;
+		margin-right: 10px 
+  		border-radius: 5px;
+		Margin-top: 20px;
+		}
+		.container .btn a {
+		display: inline-table;
+		text-align: center;
+		font-weight: bold;
+		font-size: 20px;
+		color: ;
+		grid-column-gap: 10px;
+            	grid-row-gap: 10px;
+  		padding: 5px;
+  		cursor: pointer;
+  		border-radius: 5px;
+		Margin-top: 20px;
+		Margin-left: 20px;	
+		}
+		.container .btn: hover {
+  			background-color: #448CDD;
+			}
+		.btn: hover {
+  			background-color: #448CDD;
+			}
+		.row{
+		margin left: 0px;
+		margin-right: 0px;
+		Margin-top: 20px;
+		padding: 5px;
+		}
+		.row: hover {
+  			background-color: #448CDD;
+		}
+	.col-lg-3 {
+		color: #4A9AF4;
+		display: inline-table;
+		font-weight: bold;
+		padding: 5px;
+		text-align: center;
+		font-size: 20px;
+		margin-right: 0px;
+		Margin-left:0px;
+  		cursor: pointer;
+		Margin-top: 20px;
+		
+		}
+		.col-sm-3 {
+		color: #4A9AF4;
+		display: inline-table;
+		font-weight: bold;
+		padding: 5px;
+		text-align: center;
+		font-size: 20px;
+		Margin-left:0px;
+  		cursor: pointer;
+		Margin-top: 20px;
+		margin-right: 0px;
+		}
+		
+		.col-lg-3: hover {
+  		background-color: green;
+		}
+		.col-sm-3: hover {
+  		background-color: green;
+		}
+		
+		
+		.grid {
+            	disply: grid;
+            	padding: 20px;
+            	grid-column-gap: 20px;
+            	grid-raw-gap: 10px;
+            	grid-template-columns: 200px, 200px, 200px, 200px;
+		margin-right: 5px;
+		margin-left: 20px;
+		margin-right: 10px 
+            }
+		.grid-item {
+            	disply: grid;
+            	padding: 20px;
+            	grid-column-gap: 20px;
+            	grid-row-gap: 20px;
+            	grid-template-columns: 200px, 200px, 200px, 200px;
+           	text-align: center;
+		margin-right: 10px;
+		margin-left: 20px;
+		font-size= 30px; 
+	   
 	  div {
 		  font-size: 24px;}
 	p {
