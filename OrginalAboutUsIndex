@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>About us</title>
+     <meta name="vewport" content="width=device-width, initial scale 1.0">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	    <link rel="stylesheet" href="inheritance.css">
+        <style>
+		
+		.error {
+  			border: 1px #f00;
+  			background-color: #fdd;
+
+ 			 &--serious {
+    			@extend .error;
+    			border-width: 3px;
+  			}
+		}
+		
+		.error:hover {
+  			background-color: #fee;
+			}
+
+			.error--serious {
+  			@extend .error;
+  			border-width: 3px;
+			}
+		.alert:hover, %strong-alert {
+  font-weight: bold;
+}
+
+%strong-alert:hover {
+  color: red;
+}
+           
+              
+		.container {
+		position: fixed;
+		height: auto;
+		display: inline-table;
+		width: 100%;
+		margin-top: 20px;
+		Margin-left: 0px;
+		}
+		.btn {
+		display: inline-table;
+		text-align: center;
+		font-weight: bold;
+		grid-raw-gap: 10px;
+		background-color: #448CDD;
+  		color: white;
+  		font-size: 25px;
+  		padding: 5px;
+  		cursor: pointer;
+		Margin-left: 10px;
+		margin-right: 10px 
+  		border-radius: 5px;
+		Margin-top: 20px;
+		}
+		.container .btn {
+		display: inline-table;
+		text-align: center;
+		font-weight: bold;
+		grid-raw-gap: 10px;
+		background-color: #448CDD;
+  		color: blue;
+  		font-size: 20px;
+  		padding: 10px;
+  		cursor: pointer;
+		Margin-left: 10px;
+		margin-right: 10px 
+  		border-radius: 5px;
+		Margin-top: 20px;
+		}
+		.container .btn a {
+		display: inline-table;
+		text-align: center;
+		font-weight: bold;
+		font-size: 20px;
+		color: ;
+		grid-column-gap: 10px;
+            	grid-row-gap: 10px;
+  		padding: 5px;
+  		cursor: pointer;
+  		border-radius: 5px;
+		Margin-top: 20px;
+		Margin-left: 20px;	
+		}
+		.container .btn: hover {
+  			background-color: #448CDD;
+			}
+		.btn: hover {
+  			background-color: #448CDD;
+			}
+		.row{
+		margin left: 0px;
+		margin-right: 0px;
+		Margin-top: 20px;
+		padding: 5px;
+		}
+		.row: hover {
+  			background-color: #448CDD;
+		}
+	.col-lg-3 {
+		color: #4A9AF4;
+		display: inline-table;
+		font-weight: bold;
+		padding: 5px;
+		text-align: center;
+		font-size: 20px;
+		margin-right: 0px;
+		Margin-left:0px;
+  		cursor: pointer;
+		Margin-top: 20px;
+		
+		}
+		.col-sm-3 {
+		color: #4A9AF4;
+		display: inline-table;
+		font-weight: bold;
+		padding: 5px;
+		text-align: center;
+		font-size: 20px;
+		Margin-left:0px;
+  		cursor: pointer;
+		Margin-top: 20px;
+		margin-right: 0px;
+		}
+		
+		.col-lg-3: hover {
+  		background-color: green;
+		}
+		.col-sm-3: hover {
+  		background-color: green;
+		}
+		
+		
+		.grid {
+            	disply: grid;
+            	padding: 20px;
+            	grid-column-gap: 20px;
+            	grid-raw-gap: 10px;
+            	grid-template-columns: 200px, 200px, 200px, 200px;
+		margin-right: 5px;
+		margin-left: 20px;
+		margin-right: 10px 
+            }
+		.grid-item {
+            	disply: grid;
+            	padding: 20px;
+            	grid-column-gap: 20px;
+            	grid-row-gap: 20px;
+            	grid-template-columns: 200px, 200px, 200px, 200px;
+           	text-align: center;
+		margin-right: 10px;
+		margin-left: 20px;
+		font-size= 30px; 
+	   
+	  div {
+		  font-size: 24px;}
+	p {
+		color: blue;}
+	      
+	 ul {
+		 color: blue;}
+		}
+	
+	
+          @media (min-width: 500px) {
+              h2::before {
+                 content: "Local and global COVID-19 update";
+                }
+          }
+           @media (max-width: 499px) {
+              h2::before {
+                 content: "COVID-19 Update";
+                }
+          }
+		
+	.row > div {
+            border: 2px solid black;
+            background-color:light blue;
+	    padding: 20px;
+	    font-size= 30px;
+               }
+		
+	.round-button {
+   	width: 20%;
+    	display: inline-table;
+    	margin-right: 2px;
+	}
+.round-button-circle {
+    width: auto;
+    height: 15%;
+    padding-bottom: 10%;
+    border-radius: 10%;
+    border: 1px solid #cfdcec;
+    overflow: hidden;
+    background: #4679BD;
+    box-shadow: 0 0 3px gray;
+}
+.round-button-circle:hover {
+    background: #30588e;
+}
+.round-button a {
+    display: inline-table;
+    float: left;
+    width: 50%;
+    padding-top: 100%;
+    padding-bottom: 10%;
+    padding-left: 20%;
+    line-height: 1em;
+    margin-top: -0.5em;
+    text-align: center;
+    color: #e2eaf3;
+    font-family: Verdana;
+    font-size: 2vw;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+            h1, h2 {
+        color: white;
+        font-weight: blod;
+        text-align: center;
+       
+	padding top: 20%;
+	padding-bottom: 0;
+        font-family: arial, sans-sherif;
+        }
+	
+	.banner {
+  	width: 100%;
+ 	height: 20%;
+  	background:#4A9AF4;
+  	font-size: 0;
+  	position:fixed;
+  	text-align: center;
+	margin-right:20px;
+	}
+		
+	p {
+    	color: blue;
+    	font-weight: blod;
+    	text-align: justify;
+    	font-size: 25px;
+    	margin-left: 25px;
+    	margin-right: 25px;
+	text-align: ;
+	margin-top: 150px;
+   	} 
+	.banner:hover {
+    background: #448CDD;
+	)
+		
+	.success, .warning, .error {
+	color: black;
+        font-weight: blod;
+        text-align: center;
+        font-family: arial, sans-sherif;
+        font-size: 18px;
+	border: 1px solid black;
+	padding: 20px;
+	margin: 20px; }
+		
+	.success {
+		background-color: green; }
+		
+	.warning {
+		background-color: orange; }
+	.error {
+		background-color: red; }
+	
+	.message {
+	color: black;
+        font-weight: blod;
+        text-align: center;
+        font-family: arial, sans-sherif;
+        font-size: 18px;
+	border: 1px solid black;
+	padding: 20px;
+	margin: 20px; }
+		
+	.Candy {
+		color: black;
+        font-weight: blod;
+        text-align: center;
+        font-family: arial, sans-sherif;
+        font-size: 18px;
+	border: 1px solid black;
+	padding: 20px;
+	margin: 20px; }
+		background-color: green; }
+		
+	.Chocolat {
+		color: black;
+        font-weight: blod;
+        text-align: center;
+        font-family: arial, sans-sherif;
+        font-size: 18px;
+	border: 1px solid black;
+	padding: 20px;
+	margin: 20px; }
+		background-color: brown; }
+	
+		
+	.warning {
+		color: black;
+        font-weight: blod;
+        text-align: center;
+        font-family: arial, sans-sherif;
+        font-size: 18px;
+	border: 1px solid black;
+	padding: 20px;
+	margin: 20px; }
+		background-color: red; }
+		
+		
+		
+		ol>ul {
+              		color: blue;
+          }
+          
+	    .li {
+			color: blue;
+				font-weight: bold;
+	      		}
+	      
+	  div {
+		  		font-size: 24px;
+			p {
+					color: blue;}
+	
+	      
+	 		ul {
+		 			color: blue;}
+	
+	  		ul {
+					font-size: 14px;
+					color: green;
+				}
+		
+			ol {
+					font-size: 18px;
+					color: green;
+				} 
+	      }
+html,body{
+  				height: 50%;
+			}
+a::before {
+        content="\21d2 Click here: ";
+        Font-weight: bold;
+          }
+    p::selection {
+            color: red;
+            background-color: yellow;
+            }
+         @media print {
+             .screen-only {
+                 display: none;
+          }
+          }
+	
+        </style>
+  </head>
+  <body>
+  
+	  
+	  <div class="banner">
+		<h2> </h2> 
+		<div class"container">
+        		<div class="btn">
+				<a href="https://harvard2020.github.io/project0/"  <button class="btn">Home</button></a></div>
+			<div class="btn">
+				<a href="https://harvard2020.github.io/Abou-us/"  <button class="btn">About us</a></div>
+			<div class="btn">
+				<a href="https://harvard2020.github.io/Login/"  <button class="btn">Login</a></div>	
+			<div class="btn">
+				<a href="https://harvard2020.github.io/Registration/"  <button class="btn">Registration</a></div>
+			</div>
+		</div>
+</div>
+
+    		
+	 		<div class="success">This is a success message—check it out.</div>
+	  		<div class="warning">his is a warning message-—check it out.</div>
+	  		<div class="error"> This is a error message-—check it out.</div>
+	<div class="candys">Good taste, but it shouldn't be a daily food—check it out.</div>
+	  		<div class="chocolate">Again, it is not a daily food-—check it out.</div>
+	  		<div class="warning"> his is a warning message-—check it out.</div>
+	<p> The COVID-19 page is a multisource of local and global information update associated to COVID-19. Yes we are in a worldwide pandemic situation. Generally, the COVID-19 virus could infect anybody expecpt individuals and populations who respect the preventive recommendation by local, State, Federal and global agencies. The COVID-19 website goal is to keep every visitor updated about the pandemic. Te team are briinging to our page any information that may help you sty information, make the right decision about your self and your surronding environment
+	</p>
+	  
+<p> The team are briinging to our page any information that may help you stay on the top of the information, make the right decision about your self and your surronding environment </p>
+	<div>
+		<ol> covide-19</ol>
+		<ul> Daily update from your local and international agencies</ul>
+		<li> New York Governor just annouced the lowest hospital addmission and death rate</li>
+		<p> How will be the next COVID-19 wave?</P>
+		</div>  
+<h3> The WHO decided to name it COVID-19</h3>         
+<p> Brief history of the new cornona virus 19. The new corona virus 19 was reported officially in China last Decenmber 2019 and the WHO decided to call it COVID-19.
+    It is part of the retro-virus group . It means that they don't have DNA. But, they have RNA as a source of genetic material. What make COVID-19 different tan other cornona virises? 1- It is a new reported virus </p>
+<p> What makes this CovID19 virus different than other corona virisus?</p>
+<p> Potential sources of CovID19 infection</p>
+										    </div>
+<p class=screen-only> this paragraph won't appear when you print, dag dga dga dag Corona
+<ul>
+    <Li><a href="https://harvard2020.github.io/Table/">Click Visit our data table</a></Li>
+</ul>
+    
+<ol>
+     <Li><a href="#"> CovID19 local and global updates</a></Li>
+          <ul> <Li><a href="#"> for CovID19 updates by continent</a></Li> </ul>
+     <Li><a href="#"> New York State CovID19 updates </a></Li>
+           <ul><a href="https://covid19tracker.health.ny.gov/">for New York State COVID-19 Tracker</a></ul>
+      <Li><a href="#"> Centers for Disease Control and Prevention CDC updates </a></Li>
+          <ul><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">for CDC COVID-19 Update</a></ul>
+      <Li><a href="#"> World Health Organization WHO COVID-19 update </a></Li>
+              <ul><a href="https://www.who.int">for WHO COVID-19 Update</a></ul>
+      <Li><a href="#"> Tips </a></Li>
+     </ol> 
+	<div>
+	<ul> daba daba daba</ul>
+	<ol> COVID-19 next wave</ol>
+		<p> The COVID-19 infection rate crossed 6M worldwide</p>
+	</div>
+
+           
+</body>
+</html>
