@@ -1,6 +1,12 @@
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <title> video test</title>
+          <pre id="outgoing"></pre>
+          <script src="simplepeer.min.js"></script>
+          <script src="index.js"></script>
+  </head>
   <body>
     <style>
       #outgoing {
@@ -10,9 +16,8 @@
       }
     </style>
     
-    <pre id="outgoing"></pre>
-    <script src="simplepeer.min.js"></script>
-    <script>
+  <body>
+    
       const p = new SimplePeer({
         initiator: location.hash === '#1',
         trickle: false
