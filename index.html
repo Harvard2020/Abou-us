@@ -3,14 +3,35 @@
 <html>
   <head>
     <title> video test</title>
+          <meta charset-"utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE-edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylsheet" herf="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
           <pre id="outgoing"></pre>
           <script src="simplepeer.min.js"></script>
           <script src="index.js"></script>
-          <script src="package.json"></script>
-    
+          <script src="package.json"></script> 
   </head>
   <body>
-    <style>
+    <div class="container-fluid">
+          <div class="row h-100 w-100">
+                    <div class="col-12 col-sm-6 d-flex justify-content0center">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                       <video class-"embed-responsive-item" muted> </video>
+                                  </div>
+                            </div>
+             <div class="col-12 col-sm-6 d-flex justify-content0center">
+                                  <div class="embed-responsive embed-responsive-16by9">
+                                  </div>
+                            </div>
+                  </div>
+    </div>
+    <script src="bundle.js"></script> 
+  </body>
+</html>
+    
+
+<style>
       #outgoing {
         width: 600px;
         word-wrap: break-word;
@@ -19,6 +40,7 @@
     </style>
     
   <body>
+    
     
       const p = new SimplePeer({
         initiator: location.hash === '#1',
