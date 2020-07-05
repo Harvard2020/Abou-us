@@ -1,5 +1,6 @@
 {
-  "name": "simple-peer",
+  "name": "simple-videochat-webrtc",
+  "version":1.0.0,
   "description": "Simple one-to-one WebRTC video/voice and data channels",
   "version": "1.0.0",
   "main": "main.js"'
@@ -17,26 +18,5 @@
 }
 }
  
-  },
-  "bugs": {
-    "url": ""
-  },
-  
-  "keywords": [
-    "data",
-    "data channel",
-    "data channel stream",
-    "data channels",
-    "p2p",
-    "peer",
-    "peer",
-    "peer-to-peer",
-    "stream",
-    "video",
-    "voice",
-    "webrtc",
-    "webrtc stream"
-  ],
-  "license": "MIT",
-  
+ 
  
