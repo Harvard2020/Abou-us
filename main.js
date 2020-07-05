@@ -4,56 +4,53 @@ const video = document.querySelector('video')
 let client = {}
 
 //get stream
-navigator.mediaDevices.getUserMedia({ video: true, audio:true})
-      .then(stream => { 
+navigator.mediaDevices.getUserMedia({ video: true, audio:true })
+      .then(stream => {
+
           socket.emit('NewClient')
           video.srcObject = stream
           video.play()
 }
   //Used to Initialize a peer
           function InitPeer(type){
-            let peer = new peer9{initiator:(type == 'init') ? true : false, stream:stream, trickle: 
+            let peer = new peer({initiator:(type == 'init') ? true : false, stream:stream, trickle:false}) 
                 peer.on('stream', function (stream) {
                 createVideo(stream)
-     }}
-                peer.on('stream', function () {
-                  document.getElementById("peerVideo").remove()
-                  peer.desctroy()
-                 return peer                
-   }}
+     })
+                peer.on('close', function () {
+                  document.getElementById("peerVideo").remove();
+                  peer.destroy()                             
+   })
+   return peer
+}
         //for peer of type init
             function MakePeer(){
               client-gotAnswer = false
               let peer = IniPeer('Init')
               peer.on('Signal', function(data){
-                if 9!client.gotAnswer) {
+                if (!client.gotAnswer) {
                   socket.emit('Offer', data)
                
               }
-                      }}
+                      })
               Client.peer = peer
             }
             // for peer of type not init
             function FrontAnswer(offer){
               let peer = initPeer('notInit')
-              peer.on('signal" , (data) => {
+              peer.on('signal' , (data) => {
                   socket.emit('answer', data)    
-                      }}
-              
-                      peer.signal(offer){
-                        client.gotAnswer = true
-                        let peer = client peer
-                        peer.signal(answer)
-                      }
+                      })
+                  peer.signal(offer)
             }
-              
+          
               functtion signalAnswer(Answer){
                 client.gotAnswer = true
                 let peer = client.peer
                 peer.signal(asnwer)
               }
             function CreateVideo(stream) {
-                let video = document.creatElement('video')
+                let video = document.createElement('video')
                 video.id = 'peerVideo'
                 video.srcObject = stream
               video.class = 'embed-responsive-item'
