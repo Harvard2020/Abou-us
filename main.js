@@ -9,18 +9,18 @@ navigator.mediaDevices.getUserMedia({ video: true, audio:true})
           socket.emit('NewClient')
           video.srcObject = stream
           video.play()
+}
   //Used to Initialize a peer
           function InitPeer(type){
             let peer = new peer9{initiator:(type == 'init') ? true : false, stream:stream, trickle: 
                 peer.on('stream', function (stream) {
                 createVideo(stream)
-     })
+     }}
                 peer.on('stream', function () {
                   document.getElementById("peerVideo").remove()
                   peer.desctroy()
-       })
                  return peer                
-   }
+   }}
         //for peer of type init
             function MakePeer(){
               client-gotAnswer = false
@@ -30,7 +30,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio:true})
                   socket.emit('Offer', data)
                
               }
-                      })
+                      }}
               Client.peer = peer
             }
             // for peer of type not init
@@ -38,7 +38,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio:true})
               let peer = initPeer('notInit')
               peer.on('signal" , (data) => {
                   socket.emit('answer', data)    
-                      })
+                      }}
               
                       peer.signal(offer){
                         client.gotAnswer = true
@@ -53,7 +53,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio:true})
                 peer.signal(asnwer)
               }
             function CreateVideo(stream) {
-                let video = document.creatElement( 'video')
+                let video = document.creatElement('video')
                 video.id = 'peerVideo'
                 video.srcObject = stream
               video.class = 'embed-responsive-item'
@@ -68,5 +68,5 @@ navigator.mediaDevices.getUserMedia({ video: true, audio:true})
       socket.on ('sessionActive', sessionActive)
       socket.on ('CreatePeer', MakePeer)
       
-      })
+      }}
       .catch(err => document.write(err))
