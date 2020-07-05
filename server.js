@@ -38,7 +38,10 @@ io.on('connection', function(socket){
     
     http.listen(port,  () => consol.log('Active on ${port} port'))
     
-    
+    const io = require('socket.io-client');
+// or with import syntax
+import io from 'socket.io-client';
+const socket = io();
     
     
     
