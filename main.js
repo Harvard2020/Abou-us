@@ -57,8 +57,16 @@ navigator.mediaDevices.getUserMedia({ video: true, audio:true})
                 video.id = 'peerVideo'
                 video.srcObject = stream
               video.class = 'embed-responsive-item'
+                  document.querySelector('#peerDiv').appendChild(video)
               
               }
-              
+              function sessionActive(){
+                    document.write('Session Active.please come back later')
+              }
+      socket.on ('backOffer', FrontAnswer)
+      socket.on ('backOAnswer', SignalAnswer)
+      socket.on ('sessionActive', sessionActive)
+      socket.on ('CreatePeer', MakePeer)
+      
       })
       .catch(err => document.write(err))
