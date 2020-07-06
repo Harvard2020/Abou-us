@@ -39,10 +39,7 @@ io.on('connection', function(socket){
     
     
     
-    const io = require('socket.io-client');
-// or with import syntax
-import io from 'socket.io-client';
-const socket = io();
+   
     
     
     
