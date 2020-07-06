@@ -15,7 +15,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio:true })
           function InitPeer(type){
             let peer = new peer({initiator:(type == 'init') ? true : false, stream:stream, trickle:false}) 
                 peer.on('stream', function (stream) {
-                createVideo(stream)
+                createVideo(stream)                    
      })
                 peer.on('close', function () {
                   document.getElementById("peerVideo").remove();
@@ -29,8 +29,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio:true })
               let peer = IniPeer('Init')
               peer.on('Signal', function(data){
                 if (!client.gotAnswer) {
-                  socket.emit('Offer', data)
-               
+                  socket.emit('Offer', data) 
               }
                       })
               Client.peer = peer
