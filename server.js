@@ -5,6 +5,18 @@ const http = require ('http).Server(app)
 const io = require('socket.io')(http)
 const port =process.env.PORT || 3000
 
+var express = require('express')
+  , http = require('http');
+//make sure you keep this order
+var app = express();
+var server = http.createServer(app);
+var io = require('socket.io').listen(server);
+
+//... 
+
+server.listen(8000);
+
+
 app.use(express.static(__dirname + "/public"))
 let clients = 0
 
