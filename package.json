@@ -7,6 +7,17 @@
     "start": "nodemon server.js",
     "watch" : "npx watchify ./main.js -o ./index.js"
 },
+  
+  {
+  "name": "nodemon",
+  "homepage": "http://nodemon.io",
+  "...": "... other standard package.json values",
+  "nodemonConfig": {
+    "ignore": ["test/*", "docs/*"],
+    "delay": "2500"
+  }
+}
+
 "dependencies": {
   "express": "^4.16.4",
   "simple peer": "^9.2.1",
