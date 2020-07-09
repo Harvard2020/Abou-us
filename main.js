@@ -38,15 +38,15 @@ navigator.mediaDevices.getUserMedia({ video: true, audio:true })
             function FrontAnswer(offer){
               let peer = initPeer('notInit')
               peer.on('signal' , (data) => {
-                  socket.emit('answer', data)    
+                  socket.emit('answer', data)
                       })
                   peer.signal(offer)
             }
           
-              functtion signalAnswer(Answer){
+              function signalAnswer(Answer){
                 client.gotAnswer = true
                 let peer = client.peer
-                peer.signal(asnwer)
+                peer.signal(answer)
               }
             function CreateVideo(stream) {
                 let video = document.createElement('video')
