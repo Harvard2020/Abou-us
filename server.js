@@ -23,7 +23,7 @@ let clients = 0
 io.on('connection', function(socket){
   socket.on("NewClient", function(){
     if (clients < 2) {
-      if clients ==1) {
+      if (clients ==1) {
         this.emit('createPeer')
         
       }
@@ -44,7 +44,7 @@ io.on('connection', function(socket){
       this.broadcast.emit("backOffer", offer)
     }
     function SendAnswer(data){
-      this.broadcast.emit("backAbswer", data)
+      this.broadcast.emit("backAnswer", data)
     }
     
     http.listen(port,  () => consol.log('Active on ${port} port'))
