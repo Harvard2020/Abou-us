@@ -8,6 +8,14 @@
     "watch" : "npx watchify main.js -o bundle.js"
 },
   
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/server.js"
+    "browserify": "npx browserify ./src/frontend/index.js > ./dist/main.js",
+    "watchify": "npx watchify ./src/frontend/index.js -o ./dist/main.js",
+
+  
   {
   "name": "nodemon",
   "homepage": "http://nodemon.io",
