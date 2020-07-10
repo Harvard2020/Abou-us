@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+<html>
+            <meta charset="utf-8">
+              <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <title>video test</title>
+          
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                          <link rel="stylesheet" herf="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+                                  <link rel="stylesheet" herf="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">   
+              <meta name="description" content="WebRTC Javascript code samples">
+    <link rel="stylesheet" herf="https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md">
+  
+  <style>
+   <style>
+    body {
+      display: flex;
+      height: 100vh;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+      padding: 0 50px;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    video {
+      max-width: calc(50% - 100px);
+      margin: 0 50px;
+      box-sizing: border-box;
+      border-radius: 2px;
+      padding: 0;
+      box-shadow: rgba(156, 172, 172, 0.2) 0px 2px 2px, rgba(156, 172, 172, 0.2) 0px 4px 4px, rgba(156, 172, 172, 0.2) 0px 8px 8px, rgba(156, 172, 172, 0.2) 0px 16px 16px, rgba(156, 172, 172, 0.2) 0px 32px 32px, rgba(156, 172, 172, 0.2) 0px 64px 64px;
+    }
+    .copy {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+ 
+  </head>
+  <body>
+              <div class="copy">Send your URL to a friend to start a video call</div>
+              <video class="embed-responsive-item" muted> </video>
+              <div  id="peerDiv" class="embed-responsive></div>
+<div>
+  <button id="startButton">Start</button>
+  <button id="callButton">Call</button>
+  <button id="hangupButton">Hang Up</button>
+</div>
+           <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+      <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>        
+    <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="bundle.js"></script>
+  </body>
+</html> 
+    
