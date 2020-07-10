@@ -10,33 +10,7 @@
    "bugs": {
     "url": "https://github.com/feross/simple-peer/issues"
   },
-  "scripts": {
-    "build": "browserify -s SimplePeer -r . | minify > simplepeer.min.js",
-    "size": "npm run build && cat simplepeer.min.js | gzip | wc -c",
-    "test": "standard && npm run test-node && npm run test-browser",
-    "test-browser": "airtap --coverage -- test/*.js",
-    "test-browser-local": "airtap --coverage --local -- test/*.js",
-    "test-node": "WRTC=wrtc tape test/*.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
-  },
-  
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/server.js"
-    "browserify": "npx browserify ./src/frontend/index.js > ./dist/main.js",
-    "watchify": "npx watchify ./src/frontend/index.js -o ./dist/main.js",
-  },
-  
-  {
-  "name": "nodemon",
-  "homepage": "http://nodemon.io",
-  "...": "... other standard package.json values",
-  "nodemonConfig": {
-    "ignore": ["test/*", "docs/*"],
-    "delay": "2500"
-  }
-}
+ 
 
 "dependencies": {
   "express": "^4.16.4",
