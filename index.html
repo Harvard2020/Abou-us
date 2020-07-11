@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Realtime communication with WebRTC</title>
+  <title>Realtime Video WebRTC</title>
 
   <link rel="stylesheet" href="/css/main.css" />
 
@@ -11,23 +11,20 @@
 
 <body>
 
-  <h1>Realtime communication with WebRTC</h1>
+  <h1>American Video Communication</h1>
 
   <div id="videoCanvas">
-    <video id="camera" autoplay playsinline></video>
-    <canvas id="photo"></canvas>
+    <video id="camera" autoplay playsinline></video> 
   </div>
 
-  <div id="buttons">
-    <button id="snap">Snap</button><span> then </span><button id="send">Send</button>
-    <span> or </span>
-    <button id="snapAndSend">Snap &amp; Send</button>
-  </div>
-
-  <div id="incoming">
-    <h2>Incoming photos</h2>
-    <div id="trail"></div>
-  </div>
+  <div id="button">
+    <button type="button" onclick"="Start video ();">Start video</button>
+    <button type="button" onclick"="Stop video ();">Stop video</button>  
+ <video is="remotevid" autoplay src=xxxxx
+        </video>
+    
+    <button type="button" onclick"="connect();">Connect</button>
+    <button type="button" onclick"="HungUp ();">HungUp</button>
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
