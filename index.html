@@ -6,6 +6,13 @@
   <title>Realtime Video WebRTC</title>
 
   <link rel="stylesheet" href="/css/main.css" />
+  
+  <style>
+    video {
+  max-width: 100%;
+  width: 320px;
+}
+  </style>
 
 </head>
 
@@ -13,6 +20,18 @@
 
   <h1>American Video Communication</h1>
 
+  <video id="localVideo" autoplay playsinline></video>
+<video id="remoteVideo" autoplay playsinline></video>
+
+
+<div>
+  <button id="startButton">Start</button>
+  <button id="callButton">Call</button>
+  <button id="hangupButton">Hang Up</button>
+</div>
+  
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  
   <div id="videoCanvas">
     <video id="camera" autoplay playsinline></video> 
   </div>
