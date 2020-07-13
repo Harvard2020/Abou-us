@@ -7,43 +7,33 @@
 
   <link rel="stylesheet" href="/css/main.css" />
   
-  <style>
-    video {
-  max-width: 100%;
-  width: 320px;
-}
-  </style>
+           <style>
+                video {
+                    max-width: 100%;
+                          width: 320px;
+                    }
+            </style>
 
 </head>
 
 <body>
 
   <h1>American Video Communication</h1>
-
-  <video id="localVideo" autoplay playsinline></video>
-<video id="remoteVideo" autoplay playsinline></video>
-
-
-<div>
-  <button id="startButton">Start</button>
-  <button id="callButton">Call</button>
-  <button id="hangupButton">Hang Up</button>
-</div>
-  
+ 
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-  
-  <div id="videoCanvas">
-    <video id="camera" autoplay playsinline></video> 
-  </div>
-
   <div id="button">
-    <button type="button" onclick"="Start video ();">Start video</button>
-    <button type="button" onclick"="Stop video ();">Stop video</button>  
- <video is="remotevid" autoplay src=xxxxx
-        </video>
-    
-    <button type="button" onclick"="connect();">Connect</button>
-    <button type="button" onclick"="HungUp ();">HungUp</button>
+            <div class ="remoteVideo">
+                  <video id="remoteVideo" autoplay playsinline></video>
+                          <button type="button" onclick"="Start video ();">Start video</button>
+                                <button type="button" onclick"="Stop video ();">Stop video</button>
+                                        <button type="button" onclick"="send link ();">send link</button>  
+            </div>
+            <div class ="localVideo">
+                    <video id="localVideo" autoplay playsinline></video>
+                          <button type="button" onclick"="Start video ();">Start video</button>
+                              <button type="button" onclick"="Stop video ();">Stop video</button>
+           </div>
+   </div>
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
