@@ -48,9 +48,36 @@
                                 <button type="button" onclick"="Stop-video();">Stop</button>
                                         <button type="button" onclick"="send link ();">send link</button> 
 
+										      <div class="row">
+        <div class="col"></div>
+        <div class="col-md-auto align-self-center">
+          
+            
+          <div id="url" class="alert alert-dark" role="alert">
+            <span id="roomIntro">ROOM URL</span>: <span id="roomUrl"></span>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+
+      <div id="remotes" class="row">
+        <div class="col-md-6">
+          <div class="videoContainer">
+            <video id="selfVideo" oncontextmenu="return false;"></video>
+            <meter id="localVolume" class="volume" min="-45" max="-20" high="-25" low="-40"></meter>
+          </div>
+        </div>
+      </div>
+    </div>
+										      
+ <footer>
+      <p>Hacked together by <a href="https://twitter.com/rdegges">@rdegges</a>
+        and <a href="https://twitter.com/oktadev">@oktadev</a>.</p>
+    </footer>
+						 
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-  <script src="/watch.js"></script>
+  <script src="/static/js/video.js"></script>
 
 </body>
 
