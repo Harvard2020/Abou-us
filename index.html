@@ -12,21 +12,18 @@
     	<script src="https://webrtc.github.io/adapter/adapter-4.2.2.js"></script>
 <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
            <style>
-                video {
-                    max-width: 100%;
-                          width: 320px;
-                    }
+               
              
     .button {
     			background-color: blue;
 		   }
 		   
- .Start: hover {
+ .Start-video: hover {
     			background-color: Green;
 		   }
   
 	
-.Stop : hover {
+.Stop-video : hover {
   			background-color: red;
 			}
             </style>
@@ -47,8 +44,6 @@
             <span id="roomIntro">RoomURL</span>: <span id="roomUrl"></span>
           </div>
         </div>
-        <div class="col"></div>
-      </div>
 
       <div id="remotes" class="row">
         <div class="col-md-6">
@@ -67,7 +62,7 @@
 						 
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-  <script src="/video.js"></script>
+  <script src="video.js"></script>
 
 </body>
 
