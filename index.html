@@ -13,7 +13,11 @@
 <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
            <style>
 		  
-            
+        video {
+                    max-width: 100%;
+                          width: 320px;
+                    }
+    
     .button {
     			background-color: blue;
 		   }
@@ -40,15 +44,9 @@
 		<button type="button" onclick"="StartVideo ();">StartVideo</button>
                 <button type="button" onclick"="StopVideo();">StopVideo</button>
 	<video id="remotevid" autoplay></video>
-		<button type="button" onclick"="Connect ();">Connect</button>
+		<button type="button" onclick"="Connect();">Connect</button>
                 <button type="button" onclick"="HungUp();">HungUp</button>
-	<script>
-		var video = document.getElementById('sourcevid');
-		navigator.getUserMedia({audio: true, video: true}, success);
-		function success (stream) {
-			video.src= window.URL.createObjectURL(stream);
-		}
-	</script>
+	
 	
 	
 	 <script src="/socket.io/socket.io.js"></script>
