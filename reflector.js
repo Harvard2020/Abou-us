@@ -1,10 +1,4 @@
-<script>
-		var video = document.getElementById('sourcevid');
-		navigator.getUserMedia({audio: true, video: true}, success);
-		function success (stream) {
-			video.src= window.URL.createObjectURL(stream);
-		}
-	</script>
+
 
 var server = require('http').createServer();
 var app = server.listen(1337);
@@ -16,12 +10,12 @@ socket.broadcast.emit('message', message);
 }};
 
 <script src="http://192.168.1.3:1337/socket.io/socket.io.js">
-
+</script>
 var socket.on('connect' , onChannelOpened);
 function onChannelOpened(evt){
 channelReady = true;
 }
-  </script>
+  
 function createPeerConnection() {
 var pc_config = {"iceServers":[]};
 peerConn = new RTCPeerConnection(pc_config);
