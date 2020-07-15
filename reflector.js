@@ -1,3 +1,10 @@
+<script>
+		var video = document.getElementById('sourcevid');
+		navigator.getUserMedia({audio: true, video: true}, success);
+		function success (stream) {
+			video.src= window.URL.createObjectURL(stream);
+		}
+	</script>
 
 var server = require('http').createServer();
 var app = server.listen(1337);
@@ -7,22 +14,22 @@ io.sockets.on('connection' , function(socket) {
 socket.on('message' , function(message) {
 socket.broadcast.emit('message', message);
 }};
-}};
 
 <script src="http://192.168.1.3:1337/socket.io/socket.io.js">
-<script>
+
 var socket.on('connect' , onChannelOpened);
-function onCHannelOpened(evt){
+function onChannelOpened(evt){
 channelReady = true;
 }
+  </script>
 function createPeerConnection() {
-var pc_config = {"iceServers" :[]};
+var pc_config = {"iceServers":[]};
 peerConn = new RTCPeerConnection(pc_config);
 peerConn.onicecandidate = function (evt) {
 socket.json.send({type: "candidate" , evt.candidate});
 };
 peerConn.onaddstream = function (evt) {
-remotevid.src = windows.URL.createObjectURL9evt.stream0:
+remotevid.src = windows.URL.createObjectURL(evt.stream):
 };
 peerConn.addStream(localStream);
 }
@@ -32,7 +39,7 @@ var mediaConstraints = {'mandatory': {
  function setLocalAndSendMessage(sessionDescription);
  socket.json.send(sessionDescription);
  }
- peerConn.creareOffer(setLocalAndSendMessage,
+ peerConn.createOffer(setLocalAndSendMessage,
                       errorCallback,
                       mediaConstraints);
      socket.on('message' , onMessage);
@@ -52,5 +59,6 @@ var mediaConstraints = {'mandatory': {
       } else if (evt.type ==='candidate' && started) {
       var candidate = new RTCIceCandidate(evt.candidate);
       peerConn.addIceCandidate(candidate);
-      }}
+      }
+      }
      
