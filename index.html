@@ -37,7 +37,17 @@
 	<video id="loca;vid" autoplay></video>
 	<video id="remoteid" autoplay></video>
 	<video id="sourcevid" autoplay></video>
+	<script>
+		var video = document.getElementById('sourcevid');
+		navigator.getUserMedia({audio: true, video: true}, success);
+		function success (stream) {
+			video.src= window.URL.createObjectURL(stream);
+		}
+	</script>
 	
+	 <script src="/socket.io/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="reflector.js"></script>
     
    <div class="row">
         <div class="col"></div>
@@ -74,9 +84,7 @@
         and twiter <a href="https://twitter.com/Americanecare">@americanecare</a>.</p>
     </footer>
 						 
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-  <script src="video.js"></script>
+ 
 
 </body>
 
