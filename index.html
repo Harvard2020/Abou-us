@@ -46,7 +46,13 @@
 	<video id="remotevid" autoplay></video>
 		<button type="button" onclick"="Connect();">Connect</button>
                 <button type="button" onclick"="HungUp();">HungUp</button>
-	
+	<script>
+		var video = document.getElementById('sourcevid');
+		navigator.getUserMedia({audio: true, video: true}, success);
+		function success (stream) {
+			video.src= window.URL.createObjectURL(stream);
+		}
+	</script>
 	
 	
 	 <script src="/socket.io/socket.io.js"></script>
