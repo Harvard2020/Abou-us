@@ -38,8 +38,7 @@
     
    <div class="row">
         <div class="col"></div>
-	   <button type="button" onclick"="Start-video ();">Start</button>
-                                <button type="button" onclick"="Stop-video();">Stop</button>
+	   
         <div class="col-md-auto align-self-center">       
           <div id="url" class="alert alert-dark" role="alert">
             <span id="roomIntro">RoomURL</span>: <span id="roomUrl"></span>
@@ -54,6 +53,8 @@
           <div class="videoContainer">
             <video id="selfVideo" oncontextmenu="return false;"></video>
             <meter id="localVolume" class="volume" min="-45" max="-20" high="-25" low="-40"></meter>
+		  <button type="button" onclick"="Start-video ();">Start</button>
+                                <button type="button" onclick"="Stop-video();">Stop</button>
           </div>
         </div>
       </div>
