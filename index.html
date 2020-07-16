@@ -49,7 +49,7 @@
 		var video = document.getElementById('sourcevid');
 		navigator.getUserMedia({audio: true, video: true}, success);
 		function success (stream) {
-			<video src= window.URL.createObjectURL(stream)> </video>
+			video.src= window.URL.createObjectURL.(stream);
 		}
 
 	</script>
