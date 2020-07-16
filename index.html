@@ -51,9 +51,12 @@
 if (navigator.getUserMedia) {
     navigator.getUserMedia({
         video: true
-    }, (stream) => {
-        video.src = window.URL.createObjectURL(stream);
-        video.stream = stream;
+    }, 
+	    {
+  this.srcObject = stream;
+} catch (error) {
+  this.src = window.URL.createObjectURL(stream);
+}
     }, (error) => {
         console.log(error);
     });
