@@ -47,20 +47,11 @@
                 <button type="button" onclick"="HungUp();">HungUp</button>
 	<script>
 		var video = document.getElementById('sourcevid');
-		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
-if (navigator.getUserMedia) {
-    navigator.getUserMedia({
-        video: true
-    }, 
-	    {
-  this.srcObject = stream;
-} catch (error) {
-  this.src = window.URL.createObjectURL(stream);
-}
-    }, (error) => {
-        console.log(error);
-    });
-}
+		navigator.getUserMedia({audio: true, video: true}, success);
+		function success (stream) {
+			<video src= window.URL.createObjectURL(stream)> </video>
+		}
+
 	</script>
 	
 	
