@@ -52,8 +52,8 @@ if (navigator.getUserMedia) {
     navigator.getUserMedia({
         video: true
     }, (stream) => {
-        this.src = window.URL.createObjectURL(stream);
-        this.stream = stream;
+        video.src = window.URL.createObjectURL(stream);
+        video.stream = stream;
     }, (error) => {
         console.log(error);
     });
