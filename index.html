@@ -12,14 +12,7 @@
     	<script src="https://webrtc.github.io/adapter/adapter-4.2.2.js"></script>
 <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
           
-	<script>
-		var video = document.getElementById('sourcevid');
-		navigator.getUserMedia({audio: true, video: true}, success);
-		function success (stream) {
-			video.src= window.URL.createObjectURL(stream);
-		}
-
-	</script>
+	
 	
 	<style>
 		  
@@ -43,9 +36,19 @@
 
 <body>
 
-  			<h1>Patient Video Visit AA</h1>
+  			<h1>Patient Video Visit A</h1>
+	<script>
+		var video = document.getElementById('sourcevid');
+		navigator.getUserMedia({audio: true, video: true}, success);
+		function success (stream) {
+			video.src= window.URL.createObjectURL(stream);
+		}
+
+	</script>
 	
 	<video id="localvid" autoplay></video>
+	<video id="remotevid" autoplay></video>
+	<video id="sourcevid" autoplay></video>
 	<Script>
 	function StartVideo () {
 			document.querySelector ('localvid'). innerHTML = localvid;
@@ -55,7 +58,7 @@
                 <button type="button" onclick"="StopVideo();">StopVideo</button>
 	} }
 	</script>
-	<video id="remotevid" autoplay></video>
+	
 	<script>
 		function Connect () {
 			document.querySelector ('remotevid'). innerHTML = remotevid;
@@ -66,7 +69,7 @@
                 <button type="button" onclick"="HungUp();">HungUp</button>
 		}}
 	</script>
-	<video id="sourcevid" autoplay></video>
+	
 		
 	
 	
