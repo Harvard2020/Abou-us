@@ -53,21 +53,19 @@
 	
 	<Script>
 	function StartVideo () {
-			document.querySelector ('localvid'). innerHTML = localvid;
+			document.querySelector ('localvid'). onclick = StartVideo;
 		<button type="button" onclick"="StartVideo ();">StartVideo</button>;
 	function StopVideo () {
-			document.querySelector ('localvid'). innerHTML = localvid;						       
+			document.querySelector ('localvid'). onclick = StopVideo;						       
                 <button type="button" onclick"="StopVideo();">StopVideo</button>
 	} }
-	</script>
 	
-	<script>
 	function Connect () {
-			document.querySelector ('remotevid'). innerHTML = remotevid;
+			document.querySelector ('remotevid'). onclick = Connect;
 	<button type="button" onclick"="Connect();">Connect</button>;
 	
 	function HungUp () {
-			document.querySelector ('remotevid'). innerHTML = remotevid;
+			document.querySelector ('remotevid'). onclick = HungUp;
                 <button type="button" onclick"="HungUp();">HungUp</button>
 		}}
 	</script>
