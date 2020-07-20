@@ -11,7 +11,17 @@
 		<link rel="stylesheet" href="/style.css">
     	<script src="https://webrtc.github.io/adapter/adapter-4.2.2.js"></script>
 <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-           <style>
+          
+	<script>
+		var video = document.getElementById('sourcevid');
+		navigator.getUserMedia({audio: true, video: true}, success);
+		function success (stream) {
+			video.src= window.URL.createObjectURL(stream);
+		}
+
+	</script>
+	
+	<style>
 		  
         
     
@@ -36,17 +46,28 @@
   			<h1>Patient Video Visit AA</h1>
 	
 	<video id="localvid" autoplay></video>
-	<video id="remoteid" autoplay></video>
+	<Script>
+	function StartVideo () {
+			document.querySelector ('localvid');
+		<button type="button" onclick"="StartVideo ();">StartVideo</button>;
+	function StopVideo () {
+			document.querySelector ('localvid');						       
+                <button type="button" onclick"="StopVideo();">StopVideo</button>
+	}
+	</script>
+	<video id="remotevid" autoplay></video>
+	<script>
+		function Connect () {
+			document.querySelector ('remotevid');
+	<button type="button" onclick"="Connect();">Connect</button>;
+		function HungUp () {
+			document.querySelector ('remotevid');
+                <button type="button" onclick"="HungUp();">HungUp</button>
+		}
+	</script>
 	<video id="sourcevid" autoplay></video>
 		
-	<script>
-		var video = document.getElementById('sourcevid');
-		navigator.getUserMedia({audio: true, video: true}, success);
-		function success (stream) {
-			video.src= window.URL.createObjectURL(stream);
-		}
-
-	</script>
+	
 	
 	
 	 <script src="/socket.io/socket.io.js"></script>
