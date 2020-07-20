@@ -48,22 +48,23 @@
 	<video id="localvid" autoplay></video>
 	<Script>
 	function StartVideo () {
-			document.querySelector ('localvid');
+			document.querySelector ('localvid'). innerHTML = localvid;
 		<button type="button" onclick"="StartVideo ();">StartVideo</button>;
 	function StopVideo () {
-			document.querySelector ('localvid');						       
+			document.querySelector ('localvid'). innerHTML = localvid;						       
                 <button type="button" onclick"="StopVideo();">StopVideo</button>
-	}
+	} }
 	</script>
 	<video id="remotevid" autoplay></video>
 	<script>
 		function Connect () {
-			document.querySelector ('remotevid');
+			document.querySelector ('remotevid'). innerHTML = remotevid;
 	<button type="button" onclick"="Connect();">Connect</button>;
+	
 		function HungUp () {
-			document.querySelector ('remotevid');
+			document.querySelector ('remotevid'). innerHTML = remotevid;
                 <button type="button" onclick"="HungUp();">HungUp</button>
-		}
+		}}
 	</script>
 	<video id="sourcevid" autoplay></video>
 		
