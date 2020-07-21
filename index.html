@@ -11,20 +11,10 @@
 		<link rel="stylesheet" href="/style.css">
     	<script src="https://webrtc.github.io/adapter/adapter-4.2.2.js"></script>
 <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="reflector.js"></script>
 	
-	function StopVideo () {
-		(‘StartVideo’);
-		}
-	function StopVideo () {
-	(‘StopVideo’);
-	}
-	function Connect () {
-	(‘Connect’);
-	}
-	function HungUp () {
-	(‘HungUp’);
-	}
-          
 	<style>
   
     .button {
@@ -54,10 +44,23 @@
 		var video = document.getElementById('sourcevid');
 		navigator.getUserMedia({audio: true, video: true}, success);
 		function success (stream) {
-			srcObject = stream;
+			video.srcObject = stream;
 		}
 		
 	</script>
+	function StopVideo () {
+		(‘StartVideo’);
+		}
+	function StopVideo () {
+	(‘StopVideo’);
+	}
+	function Connect () {
+	(‘Connect’);
+	}
+	function HungUp () {
+	(‘HungUp’);
+	}
+          
 	document.querySelector ('#localvid'). onclick = StartVideo;
 					<button onclick="StartVideo ()">StartVideo</button>;
 	document.querySelector ('#localvid'). onclick = StopVideo;						       
@@ -71,9 +74,7 @@
 	
 	
 	
-	 <script src="/socket.io/socket.io.js"></script>
-  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-  <script src="reflector.js"></script>
+	 
 	<script src="package.json"></script>
 		<script src="travis.yml"></script> 
     
