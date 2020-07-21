@@ -45,26 +45,47 @@
 		}
 	</script>
 	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+                  document.querySelector('button').onclick = StartVideo;
+              });
 	function StartVideo () {
-			document.querySelector ('localvid'). onclick = StartVideo;
+		document.querySelector('#localvid').innerHTML = StartVideo;
+			document.querySelector ('#localvid'). onclick = StartVideo;
 					<button type="button" onclick="StartVideo ()">StartVideo</button>;
 	}
-	function StopVideo () {
-			document.querySelector ('localvid'). onclick = StopVideo;						       
-               					 <button type="button" onclick="StopVideo()">StopVideo</button>
-	} 
+	</script>
 	
-	function Connect () {
-			document.querySelector ('remotevid'). onclick = Connect;
-					<button type="button" onclick="Connect()">Connect</button>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+                  document.querySelector('button').onclick = StopVideo;
+              });
+	function StartVideo () {
+		document.querySelector('#localvid').innerHTML = StoptVideo;
+			document.querySelector ('#localvid'). onclick = StopVideo;
+					<button type="button" onclick="StartVideo ()">StopVideo</button>;
 	}
-	function HungUp () {
-			document.querySelector ('remotevid'). onclick = HungUp;
-                				<button type="button" onclick="HungUp()">HungUp</button>
-		}
-	</Script>
+	</script>
 	
-		
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+                  document.querySelector('button').onclick = Connect;
+              });
+	function StartVideo () {
+		document.querySelector('#remote').innerHTML = Connect;
+			document.querySelector ('#remote'). onclick = Connect;
+					<button type="button" onclick="StartVideo ()">Connect</button>;
+	}
+	</script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+                  document.querySelector('button').onclick = HungUp;
+              });
+	function StartVideo () {
+		document.querySelector('#remote').innerHTML = HungUp;
+			document.querySelector ('#remote'). onclick = HungUp;
+					<button type="button" onclick="StartVideo ()">HungUp</button>;
+	}
+	</script>
 	
 	
 	
