@@ -32,9 +32,9 @@
 
 <body>
 
-  			<h1>Patient Video Visit Aa</h1>
-	<video id="localvid" autoplay></video>
-	<video id="remotevid" autoplay></video>
+  			<h1>Patient Video Visit A</h1>
+	<video id="localvid" autoplay> src="localHost ()"</video>
+	<video id="remotevid" autoplay> src="localHost ()</video>
 	<video id="sourcevid" autoplay></video>
 	
 	<script>
@@ -44,8 +44,7 @@
 			video.src= window.URL.createObjectURL(stream);
 		}
 	</script>
-
-	<Script>
+	<script>
 	function StartVideo () {
 			document.querySelector ('localvid'). onclick = StartVideo;
 		<button type="button" onclick="StartVideo ()">StartVideo</button>;
