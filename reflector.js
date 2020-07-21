@@ -6,7 +6,9 @@ var io = require('socket.io').listen(app);
 io.sockets.on('connection' , function(socket) {
 socket.on('message' , function(message) {
 socket.broadcast.emit('message', message);
-}};
+}
+         )
+};
 
 <script src="http://192.168.1.3:1337/socket.io/socket.io.js">
 </script>
