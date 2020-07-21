@@ -54,7 +54,7 @@
 		var video = document.getElementById('sourcevid');
 		navigator.getUserMedia({audio: true, video: true}, success);
 		function success (stream) {
-			video.src= window.elem.srcObject = stream;
+			srcObject = stream;
 		}
 		
 	</script>
