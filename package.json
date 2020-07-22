@@ -1,13 +1,4 @@
-{
-  
-  "main": "Gruntfile.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/webrtc/apprtc.git"
-  },
-  "scripts": {
-    "test": "grunt"
-  },
+
   "devDependencies": {
     "eslint-config-webrtc": ">=1.0.0",
     "grunt": "^1.0.4",
