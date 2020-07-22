@@ -1,12 +1,4 @@
-
-
-index f7005f3..ccc1f22 100644
---- a/server.js
-+++ b/server.js
-@@ -4,7 +4,8 @@ var express = require('express'),
-     wine = require('./routes/wines');
-
- var app = express();
+var app = express();
 -
 +var server = http.createServer(app);
 +var io = require('socket.io').listen(server);
