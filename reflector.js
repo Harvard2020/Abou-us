@@ -12,9 +12,6 @@ socket.broadcast.emit('message', message);
 }
           );
 
-<script src="http://socket.io/socket.io.js">
-</script>
-
 var socket.on('connect' , onChannelOpened);
 function onChannelOpened(evt){
 channelReady = true;
