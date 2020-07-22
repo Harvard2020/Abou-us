@@ -1,7 +1,7 @@
 var app = express();
 -
-+var server = http.createServer(app);
-+var io = require('socket.io').listen(server);
+var server = http.createServer(app);
+var io = require('socket.io').listen(server);
  app.configure(function () {
      app.set('port', process.env.PORT || 3000);
      app.use(express.logger('dev'));  /* 'default', 'short', 'tiny', 'dev' */
