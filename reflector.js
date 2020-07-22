@@ -1,4 +1,27 @@
 
+diff --git a/server.js b/server.js
+index f7005f3..ccc1f22 100644
+--- a/server.js
++++ b/server.js
+@@ -4,7 +4,8 @@ var express = require('express'),
+     wine = require('./routes/wines');
+
+ var app = express();
+-
++var server = http.createServer(app);
++var io = require('socket.io').listen(server);
+ app.configure(function () {
+     app.set('port', process.env.PORT || 3000);
+     app.use(express.logger('dev'));  /* 'default', 'short', 'tiny', 'dev' */
+@@ -18,6 +19,6 @@ app.post('/wines', wine.addWine);
+ app.put('/wines/:id', wine.updateWine);
+ app.delete('/wines/:id', wine.deleteWine);
+
+-http.createServer(app).listen(app.get('port'), function () {
++server.listen(app.get('port'), function () {
+     console.log("Express server listening on port " + app.get('port'));
+ });
+        
 var server = require('http').createServer();
 var app = server.listen(1337);
 var io = require('socket.io').listen(app);
@@ -12,6 +35,7 @@ socket.broadcast.emit('message', message);
 
 <script src="http://192.168.1.3:1337/socket.io/socket.io.js">
 </script>
+
 var socket.on('connect' , onChannelOpened);
 function onChannelOpened(evt){
 channelReady = true;
