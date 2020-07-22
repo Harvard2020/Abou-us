@@ -12,7 +12,8 @@ var io = require('socket.io').listen(server);
 -http.createServer(app).listen(app.get('port'), function () {
 +server.listen(app.get('port'), function () {
      console.log("Express server listening on port " + app.get('port'));
- });
+ }
+              );
         
 var server = require('http').createServer();
 var app = server.listen(1337);
@@ -21,8 +22,8 @@ var io = require('socket.io').listen(app);
 io.sockets.on('connection' , function(socket) {
 socket.on('message' , function(message) {
 socket.broadcast.emit('message', message);
-)}
-        
+           )
+       }        
 };
 
 <script src="http://192.168.1.3:1337/socket.io/socket.io.js">
@@ -37,7 +38,7 @@ function createPeerConnection() {
 var pc_config = {"iceServers":[]};
 peerConn = new RTCPeerConnection(pc_config);
 peerConn.onicecandidate = function (evt) {
-socket.json.send({type: "candidate" , evt.candidate});
+socket.json.send ({type: "candidate" , evt.candidate});
 };
 peerConn.onaddstream = function (evt) {
 remotevid.src = windows.URL.createObjectURL(evt.stream):
