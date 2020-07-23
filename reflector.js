@@ -11,8 +11,8 @@ socket.broadcast.emit('message', message);
            )
 }
           );
-
-var socket.on('connect' , onChannelOpened);
+var socket = io.connect(); 
+('connect' , onChannelOpened);
 function onChannelOpened(evt){
 channelReady = true;
 }
