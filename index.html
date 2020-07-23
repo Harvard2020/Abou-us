@@ -16,6 +16,20 @@
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
   <script src="reflector.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script>
+	function StartVideo () {
+		document.querySelector ('#localvid'). onclick = StartVideo;
+		}
+	function StopVideo () {
+		document.querySelector ('#localvid'). onclick = StopVideo;	
+	}
+	function Connect () {
+		document.querySelector ('#remotevid'). onclick = Connect;
+	}
+	function HungUp () {
+		document.querySelector ('#remotevid'). onclick = HungUp;
+	}
+    </script>
 
 	
 	<style>
@@ -51,6 +65,10 @@
 		}
 		
 	</script>
+<button onclick="StartVideo ()"> Start </button>;       
+               			 	<button  onclick="StopVideo()">Stop</button>
+		<button " onclick="Connect()">Connect</button>
+                				<button " onclick="HungUp()">HungUp</button>
 
 	 <script src="/socket.io/socket.io.js"></script
 </body>
